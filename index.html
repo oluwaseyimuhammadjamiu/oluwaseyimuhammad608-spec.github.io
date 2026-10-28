@@ -1,223 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Professional Portfolio</title>
-  <style>
-    :root {
-      --primary-color: #2563eb;
-      --bg-color: #f8fafc;
-      --card-bg: #ffffff;
-      --text-color: #1e293b;
-      --text-muted: #64748b;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammedjamiu Oluwaseyi | Resume & Career Documents Expert</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    /* Header / Hero Section */
-    .profile-card {
-      background: var(--card-bg);
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+        header {
+            background: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
 
-    .profile-img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--primary-color);
-      margin-bottom: 1rem;
-    }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.25rem;
+            border: 3px solid var(--primary);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
+        }
 
-    .profile-card h1 {
-      font-size: 1.8rem;
-      color: var(--text-color);
-      margin-bottom: 0.25rem;
-    }
+        h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
 
-    .profile-card h2 {
-      font-size: 1.1rem;
-      color: var(--primary-color);
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
+        .title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
 
-    .profile-card p {
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-    }
+        .bio {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-    /* Career Journey / Timeline Section */
-    .section-title {
-      font-size: 1.4rem;
-      margin-bottom: 1.5rem;
-      color: var(--text-color);
-      border-bottom: 2px solid #e2e8f0;
-      padding-bottom: 0.5rem;
-    }
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
 
-    .timeline {
-      position: relative;
-      padding-left: 20px;
-      border-left: 2px solid var(--primary-color);
-      margin-bottom: 2rem;
-    }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--bg-color);
+        }
 
-    .timeline-item {
-      position: relative;
-      margin-bottom: 1.5rem;
-      padding-left: 15px;
-    }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
 
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -27px;
-      top: 5px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--primary-color);
-    }
+        @media (min-width: 640px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
 
-    .timeline-date {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
+        .project-card {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-    .timeline-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin: 0.2rem 0;
-    }
+        .project-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75krem;
+            color: var(--text-color);
+        }
 
-    .timeline-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.925rem;
+            margin-bottom: 1.25rem;
+        }
 
-    /* Projects / Proof Section */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+            transition: background 0.2s;
+        }
 
-    .project-card {
-      background: var(--card-bg);
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      border: 1px solid #e2e8f0;
-    }
+        .btn:hover {
+            background: #1d4ed8;
+        }
 
-    .project-card h3 {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .project-card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
-    }
-
-    .project-link {
-      display: inline-block;
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-    }
-  </style>
+        footer {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    
-    <!-- Profile & Header Section -->
-    <section class="profile-card">
-      <!-- Replace URL with your direct photo link -->
-      <img class="profile-img" src="https://via.placeholder.com/140" alt="Profile Picture" />
-      <h1>Your Name</h1>
-      <h2>Your Title / Specialization (e.g. Full-Stack Developer / UI Specialist)</h2>
-      <p>
-        Welcome! I specialize in delivering high-quality solutions. Explore my career journey, key achievements, and recent work samples below.
-      </p>
-    </section>
+    <div class="container">
+        <!-- Header / Profile Section -->
+        <header>
+            <img src="https://i.ibb.co/6R2vKzXj/ChatGPT-Image-Jul-31-2026-04-38-56-AM.png" alt="Muhammedjamiu Oluwaseyi" class="profile-img">
+            <h1>Muhammedjamiu Oluwaseyi</h1>
+            <div class="title">Resume & Career Documents Expert</div>
+            <p class="bio">
+                Specialized in transforming career histories into compelling, ATS-optimized resumes and professional documents that capture attention and drive interviews. Browse my sample projects below.
+            </p>
+        </header>
 
-    <!-- Career Journey Section -->
-    <h2 class="section-title">Career Journey & Experience</h2>
-    <div class="timeline">
-      
-      <div class="timeline-item">
-        <div class="timeline-date">2023 - Present</div>
-        <div class="timeline-title">Senior Role / Freelance Consultant</div>
-        <div class="timeline-desc">Leading project developments, optimizing performance, and delivering custom digital solutions to clients worldwide.</div>
-      </div>
+        <!-- Featured Samples Section -->
+        <section>
+            <h2>Featured Sample Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div>
+                        <h3>Executive Resume Optimization</h3>
+                        <p>Complete overhaul of a senior management resume focusing on quantifiable achievements, leadership metrics, and keyword targeting for ATS compliance.</p>
+                    </div>
+                    <a href="#" class="btn" target="_blank">View Sample Document</a>
+                </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">2021 - 2023</div>
-        <div class="timeline-title">Specialist / Mid-Level Position</div>
-        <div class="timeline-desc">Collaborated with cross-functional teams to design, implement, and scale core projects.</div>
-      </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Tech Career Transition Resume</h3>
+                        <p>Strategic restructure tailored for professionals pivoting into technology roles, translating transferable skills into high-impact value propositions.</p>
+                    </div>
+                    <a href="#" class="btn" target="_blank">View Sample Document</a>
+                </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">2019 - 2021</div>
-        <div class="timeline-title">Junior Role / Early Career</div>
-        <div class="timeline-desc">Focused on foundational skills, building key competencies, and managing initial client deliverables.</div>
-      </div>
-
+            </div>
+        </section>
     </div>
 
-    <!-- Featured Work / Proof -->
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Brief description of the project, key challenges solved, and results delivered.</p>
-        <a href="#" class="project-link" target="_blank">View Live Demo &rarr;</a>
-      </div>
-
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Brief description highlighting tech stack or tools used and project outcome.</p>
-        <a href="#" class="project-link" target="_blank">View Live Demo &rarr;</a>
-      </div>
-
-    </div>
-
-  </div>
+    <footer>
+        &copy; 2026 Muhammedjamiu Oluwaseyi. All rights reserved.
+    </footer>
 
 </body>
 </html>
